@@ -51,7 +51,7 @@
 
         installPhase = ''
           mkdir -p $out/lib/lv2
-          cp -r ./bin/ImpulseLoader.lv2 $out/lib/lv2/
+          cp -r ./bin/ImpulseLoader.lv2 $out/lib/lv2
         '';
   	};
 	};
