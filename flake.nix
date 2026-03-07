@@ -50,7 +50,7 @@
         devShells.default = pkgs.mkShell {
           packages = [
             plugin
-            pkgs.carla
+            pkgs.jalv
           ];
 
           shellHook = ''
@@ -61,7 +61,7 @@
         apps.default = flake-utils.lib.mkApp {
           drv = pkgs.writeShellScriptBin "carla-ir" ''
             export LV2_PATH=${plugin}/lib/lv2;
-            exec ${pkgs.carla}/bin/carla --load ${wiring}
+            exec ${pkgs.jalv}/bin/jalv.gtk3  urn:brummer:ImpulseLoader
           '';
         };
       }
